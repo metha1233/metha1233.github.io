@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IT MEEEEEEEE</title>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit&family=Itim&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Itim', cursive;
+      background: url('https://i.pinimg.com/originals/bc/87/e5/bc87e5124f8d2cfe810d403adc96ad01.gif') no-repeat center center fixed;
+      background-size: cover;
+      overflow: hidden;
+      color: white;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .stars {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(white 1px, transparent 1px);
+      background-size: 40px 40px;
+      animation: twinkle 2s infinite ease-in-out;
+      z-index: 0;
+      opacity: 0.15;
+    }
+
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.15; }
+      50% { opacity: 0.3; }
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideIn {
+      0% { opacity: 0; transform: translateX(-50px); }
+      100% { opacity: 1; transform: translateX(0); }
+    }
+
+    .container {
+      display: flex;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 25px;
+      padding: 50px;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+      width: 95%;
+      max-width: 1000px;
+      animation: slideIn 1.5s ease-out;
+      position: relative;
+      z-index: 2;
+    }
+
+    .profile-img {
+      flex: 1;
+      margin-right: 40px;
+    }
+
+    .profile-img img {
+      width: 100%;
+      border-radius: 25px;
+      object-fit: cover;
+      animation: fadeIn 2s ease-in;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    }
+
+    .profile-info {
+      flex: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .profile-info h1 {
+      font-size: 70px;
+      margin: 0;
+      color: #fff;
+      text-shadow: 0 0 20px #fff;
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #fff, 0 0 20px #ff80ab; }
+      to   { text-shadow: 0 0 20px #fff, 0 0 30px #ff4081; }
+    }
+
+    .profile-info p {
+      font-size: 22px;
+      margin: 10px 0;
+      color: #ffffff;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .button {
+      margin-top: 25px;
+      padding: 15px;
+      font-size: 18px;
+      border: none;
+      border-radius: 12px;
+      background-color: #ff69b4;
+      color: white;
+      cursor: pointer;
+      width: 100%;
+      font-family: 'Kanit', sans-serif;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+
+    .socials {
+      margin-top: 25px;
+      display: flex;
+      gap: 20px;
+    }
+
+    .socials a {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      background-color: white;
+      border-radius: 50%;
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+
+    .socials a:hover {
+      transform: scale(1.2);
+    }
+
+    .socials img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .duck {
+      position: absolute;
+      bottom: 20px;
+      width: 100px;
+      animation: gooseWalk 20s linear infinite;
+      z-index: 1;
+    }
+
+    @keyframes gooseWalk {
+      0% { left: -120px; transform: scaleX(1); }
+      50% { transform: scaleX(1); }
+      51% { transform: scaleX(-1); }
+      100% { left: 100vw; transform: scaleX(-1); }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+
+    @keyframes floatReverse {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(20px); }
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translate(-50%, 0); }
+      50% { transform: translate(-50%, -15px); }
+    }
+  </style>
+</head>
+<body>
+  <div class="stars"></div>
+  <div class="container">
+    <div class="profile-img">
+      <img src="https://i.pinimg.com/736x/ef/e3/40/efe340be243caa301f65b76995a706cc.jpg" alt="รูปของเมธา">
+    </div>
+    <div class="profile-info">
+      <h1>IT ME</h1>
+      <p>NAME: METHA CHANRANGSEE</p>
+      <p>AGE: 17</p>
+      <p>GENDER: MALE</p>
+      <button class="button" onclick="window.location.href='more-info.html'">ADDUTIONAL INFORMATION</button>
+      <div class="socials">
+        <a href="https://www.instagram.com/metha_.d?igsh=MTBrb2VjamNpMmJ4Mw==" target="_blank">
+          <img src="https://images.icon-icons.com/2428/PNG/512/instagram_black_logo_icon_147122.png" alt="Instagram">
+        </a>
+        <a href="https://www.facebook.com/share/12JQH215rYP/" target="_blank">
+          <img src="https://www.modify.in.th/wp-content/uploads/Facebook-Dark-logo.webp" alt="Facebook">
+        </a>
+      </div>
+    </div>
+  </div>
+  <img class="duck" src="https://i.pinimg.com/originals/f1/04/ca/f104ca9dc7a7626ca4e587792da17554.gif" alt="ตัวห่านเดินน่ารัก" />
+</body>
+</html>
